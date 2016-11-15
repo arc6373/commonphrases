@@ -1,0 +1,33 @@
+{
+  "name": "commonphrases",
+  "version": "1.0.0",
+  "description": "This library is used to find common phrases used in a string or from an array of strings",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "^3.5.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.1.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arc6373/commonphrases.git"
+  },
+  "keywords": [
+    "common",
+    "phrases"
+  ],
+  "author": "arc6373",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arc6373/commonphrases/issues"
+  },
+  "homepage": "https://github.com/arc6373/commonphrases#readme"
+}
