@@ -45,6 +45,34 @@ var topAmount = CommonPhrases.dict.getTopAmount(1, example_dict);
 console.log(topAmount); // [ { phrase: 'This is', count: 25 } ]
 ```
 
+# Parameters and return values
+
+phrases.getAllPhrases
+	- Params
+		messages - Array of strings
+	- Returns
+		dictionary of key/value pairs. Key = phrase, value = amount of times appeared
+
+phrases.getTopPhrases
+	- Params
+		amount - an integer, the number of objects you want returned
+		messages - Array of strings
+	- Returns
+		list - list of objects that contain the phrase and count
+
+dict.getMaxKey
+	- Params
+		dictionary - a JS object
+	- Returns
+		the key that had the max value, a string
+
+dict.getTopAmount
+	- Params
+		amount - the number of top phrases to be returned
+		dictionary - the object to be searched for the top phrases
+	- Returns
+		list - list of objects that contain the phrase and count
+
 # To Do:
 <ul>
 	<li>Finish README properly</li>
