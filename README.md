@@ -46,8 +46,8 @@ console.log(topAmount); // [ { phrase: 'This is', count: 25 } ]
 ```
 
 # Parameters and return values
-
-phrases.getAllPhrases
+```
+phrases.getAllPhrases 
 	- Params
 		messages - Array of strings
 	- Returns
@@ -72,6 +72,7 @@ dict.getTopAmount
 		dictionary - the object to be searched for the top phrases
 	- Returns
 		list - list of objects that contain the phrase and count
+```
 
 # To Do:
 <ul>
