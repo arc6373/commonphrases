@@ -4,9 +4,6 @@ This is a library that will extract the most popular phrases out of an array of 
 
 # To Do:
 <ul>
-	<li>Missing parameters exception</li>
-	<li>Finish unit tests</li>
-	<li>provide examples</li>
 	<li>Finish README properly</li>
 	<li>Not allowed list (for phrases like 'or the')</li>
 </ul>
