@@ -83,6 +83,7 @@ dict.getTopAmount
 # Planned Features:
 <ul>
  	<li>Phrases of any size (greater than 2)</li>
+ 	<li>Multiple sized phrases</li>
  	<li>More dictionary helpers</li>
  	<li>Allow users to provide their own not allowed list</li>
 </ul>
