@@ -45,6 +45,23 @@ var topAmount = CommonPhrases.dict.getTopAmount(1, example_dict);
 console.log(topAmount); // [ { phrase: 'This is', count: 25 } ]
 ```
 
+Added in v 1.1.1 was the variable length phrase generator. 
+
+```
+const CommonPhrases = require('CommonPhrases');
+
+var example_messages = ["This is This is an example"];
+
+var getAllResult = CommonPhrases.variablePhrases.getAllPhrasesVarLength(example_messages, 2); 
+// New param is an integer of the phrase length you want
+
+console.log(getAllResult); // { 'This is': 2, 'is This': 1, 'is an': 1, 'an example': 1 }
+
+var getTopResults = CommonPhrases.variablePhrases.getTopPhrasesVarLength(1, example_messages, 2);
+
+console.log(getTopResults); // [ { phrase: 'This is', count: 2 } ]
+```
+
 # Parameters and return values
 ```
 phrases.getAllPhrases 
@@ -74,15 +91,21 @@ dict.getTopAmount
 		list - list of objects that contain the phrase and count
 ```
 
+# Version Updates
+
+## V1.1.1
+<ul>
+	<li>Adding a check in getTopPhrases to ensure every message is defined in the event an undefined message gets passed through.</li>
+	<li>Added in the variablePhrases file and functions</li>
+</ul>
+
 # To Do:
 <ul>
-	<li>Finish README properly</li>
 	<li>Not allowed list (for phrases like 'or the')</li>
 </ul>
 
 # Planned Features:
 <ul>
- 	<li>Phrases of any size (greater than 2)</li>
  	<li>Multiple sized phrases</li>
  	<li>More dictionary helpers</li>
  	<li>Allow users to provide their own not allowed list</li>

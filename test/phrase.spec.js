@@ -54,6 +54,19 @@ describe('Test phrases file', () => {
 			done();
 		});
 
+		it('should return the top phrases even with an undefined message', (done) => {
+			var messages = ['This is test', undefined];
+
+			var expected = [
+				{'phrase': 'This is', 'count': 1}
+			];
+
+			var result = phrases.getTopPhrases(1, messages);
+			
+			expect(result).to.deep.equal(expected);
+			done();
+		});
+
 		it('should return the top phrases with amount of 3', (done) => {
 			var messages = ['This is test'];
 
