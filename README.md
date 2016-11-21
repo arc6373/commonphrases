@@ -67,6 +67,7 @@ console.log(getTopResults); // [ { phrase: 'This is', count: 2 } ]
 phrases.getAllPhrases 
 	- Params
 		messages - Array of strings
+		(optional) user_list - a list of phrases to not allow provided by the user
 	- Returns
 		dictionary of key/value pairs. Key = phrase, value = amount of times appeared
 
@@ -74,6 +75,7 @@ phrases.getTopPhrases
 	- Params
 		amount - an integer, the number of objects you want returned
 		messages - Array of strings
+		(optional) user_list - a list of phrases to not allow provided by the user
 	- Returns
 		list - list of objects that contain the phrase and count
 
@@ -89,6 +91,22 @@ dict.getTopAmount
 		dictionary - the object to be searched for the top phrases
 	- Returns
 		list - list of objects that contain the phrase and count
+
+variablePhrases.getAllPhrasesVarLength
+	- Params
+		messages - Array of strings
+		phrase_length - the length of the phrases to return
+		(optional) user_list - the list of not allowed phrases
+	- Returns
+		dict of key/values pairs. Key = phrase, value = amount of times appeared.
+
+variablePhrases.getTopPhrasesVarLength
+	- Params
+		amount - the amount of items to return
+		message - Array of strings 
+		phrase_length = the length of the phrases to return
+		(optional) user_list - the list of not allowed phrases
+
 ```
 
 # Version Updates
@@ -99,14 +117,13 @@ dict.getTopAmount
 	<li>Added in the variablePhrases file and functions</li>
 </ul>
 
-# To Do:
+## v1.1.2
 <ul>
-	<li>Not allowed list (for phrases like 'or the')</li>
+	<li>Added in the ability to </li>
 </ul>
 
 # Planned Features:
 <ul>
  	<li>Multiple sized phrases</li>
  	<li>More dictionary helpers</li>
- 	<li>Allow users to provide their own not allowed list</li>
 </ul>
