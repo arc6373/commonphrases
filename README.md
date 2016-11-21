@@ -119,7 +119,7 @@ variablePhrases.getTopPhrasesVarLength
 
 ## v1.1.2
 <ul>
-	<li>Added in the ability to </li>
+	<li>Added in the ability to pass through a disallowed phrase list.</li>
 </ul>
 
 # Planned Features:
