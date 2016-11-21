@@ -25,6 +25,20 @@ describe('Test variablePhrases file', () => {
 			done();
 		});
 
+		it('should return the dictionary of phrases without the disallowed phrases', (done) => {
+			var messages = ['This is test'];
+
+			var not_allowed = ['This is'];
+
+			var expected = {
+				'is test': 1
+			};
+			var result = phrases.getAllPhrasesVarLength(messages, 2, not_allowed);
+			
+			expect(result).to.deep.equal(expected);
+			done();
+		});
+
 		it('should return the entire dictionary of phrases with phrase len 3', (done) => {
 			var messages = ['This is a test'];
 
@@ -32,7 +46,7 @@ describe('Test variablePhrases file', () => {
 				'This is a': 1,
 				'is a test': 1
 			};
-			var result = phrases.getAllPhrasesVarLength(messages, 3);
+			var result = phrases.getAllPhrasesVarLength(messages, 3, []);
 			
 			expect(result).to.deep.equal(expected);
 			done();

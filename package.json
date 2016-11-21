@@ -1,6 +1,6 @@
 {
   "name": "commonphrases",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "This library is used to find common phrases used in a string or from an array of strings",
   "main": "index.js",
   "directories": {

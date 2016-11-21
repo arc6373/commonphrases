@@ -19,7 +19,21 @@ describe('Test phrases file', () => {
 				'This is': 1,
 				'is test': 1
 			};
-			var result = phrases.getAllPhrases(messages);
+			var result = phrases.getAllPhrases(messages, []);
+			
+			expect(result).to.deep.equal(expected);
+			done();
+		});
+
+		it('should return the dictionary of phrases without the disallowed phrases', (done) => {
+			var messages = ['This is test'];
+
+			var not_allowed = ['This is'];
+
+			var expected = {
+				'is test': 1
+			};
+			var result = phrases.getAllPhrases(messages, not_allowed);
 			
 			expect(result).to.deep.equal(expected);
 			done();
@@ -48,7 +62,7 @@ describe('Test phrases file', () => {
 				{'phrase': 'This is', 'count': 1}
 			];
 
-			var result = phrases.getTopPhrases(1, messages);
+			var result = phrases.getTopPhrases(1, messages, []);
 			
 			expect(result).to.deep.equal(expected);
 			done();
@@ -61,7 +75,7 @@ describe('Test phrases file', () => {
 				{'phrase': 'This is', 'count': 1}
 			];
 
-			var result = phrases.getTopPhrases(1, messages);
+			var result = phrases.getTopPhrases(1, messages, []);
 			
 			expect(result).to.deep.equal(expected);
 			done();
@@ -75,7 +89,7 @@ describe('Test phrases file', () => {
 				{'phrase': 'is test', 'count': 1}
 			];
 
-			var result = phrases.getTopPhrases(2, messages);
+			var result = phrases.getTopPhrases(2, messages, []);
 			
 			expect(result).to.deep.equal(expected);
 			done();
